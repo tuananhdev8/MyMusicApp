@@ -1,14 +1,14 @@
 import { View, Text, StyleSheet } from 'react-native';
 
-export default function NotFound() {
+export default function Explore() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>404 - Trang không tồn tại</Text>
+      <Text style={styles.text}>Trang khám phá - Explore</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: { flex:1, justifyContent:'center', alignItems:'center' },
-  text: { fontSize:18 }
+  text: { fontSize:20, fontWeight:'600' }
 });
