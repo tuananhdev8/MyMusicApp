@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "zing-mp3",
-    "slug": "zing-mp3",
+    "name": "MyMusicApp",
+    "slug": "MyMusicApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "zingmp3",
+    "scheme": "MyMusicApp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -17,7 +17,7 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.anonymous.zingmp3"
+      "package": "com.anonymous.MyMusicApp"
     },
     "web": {
       "bundler": "metro",
