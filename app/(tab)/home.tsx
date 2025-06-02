@@ -11,56 +11,22 @@ const DATA = [
     title: 'Chạm đáy nỗi đau',
     artist: 'ERIK',
     image: 'https://i.scdn.co/image/ab67616d0000b2735a85b345cb9461f3aa400dc1',
+    audio: 'https://samplelib.com/lib/preview/mp3/sample-3s.mp3',
   },
   {
     id: '2',
     title: '3107',
     artist: 'Duongg',
     image: 'https://i.scdn.co/image/ab67616d0000b2735a85b345cb9461f3aa400dc1',
+    audio: 'https://samplelib.com/lib/preview/mp3/sample-6s.mp3',
   },
   {
     id: '3',
     title: 'Em của ngày hôm qua',
     artist: 'Sơn Tùng MTP',
     image: 'https://i.scdn.co/image/ab67616d0000b2735a85b345cb9461f3aa400dc1',
+    audio: 'https://samplelib.com/lib/preview/mp3/sample-9s.mp3',
   },
-  {
-    id: '4',
-    title: 'Chạm đáy nỗi đau',
-    artist: 'ERIK',
-    image: 'https://i.scdn.co/image/ab67616d0000b2735a85b345cb9461f3aa400dc1',
-  },
-  {
-    id: '5',
-    title: '3107',
-    artist: 'Duongg',
-    image: 'https://i.scdn.co/image/ab67616d0000b2735a85b345cb9461f3aa400dc1',
-  },
-  {
-    id: '6',
-    title: 'Em của ngày hôm qua',
-    artist: 'Sơn Tùng MTP',
-    image: 'https://i.scdn.co/image/ab67616d0000b2735a85b345cb9461f3aa400dc1',
-  },
-  {
-    id: '7',
-    title: 'Chạm đáy nỗi đau',
-    artist: 'ERIK',
-    image: 'https://i.scdn.co/image/ab67616d0000b2735a85b345cb9461f3aa400dc1',
-  },
-  {
-    id: '8',
-    title: '3107',
-    artist: 'Duongg',
-    image: 'https://i.scdn.co/image/ab67616d0000b2735a85b345cb9461f3aa400dc1',
-  },
-  {
-    id: '9',
-    title: 'Em của ngày hôm qua',
-    artist: 'Sơn Tùng MTP',
-    image: 'https://i.scdn.co/image/ab67616d0000b2735a85b345cb9461f3aa400dc1',
-  },
-  
 ];
 
 export default function HomeScreen() {
@@ -76,10 +42,10 @@ export default function HomeScreen() {
     router.push({
       pathname: '/PlayMusic',
       params: {
-        id: item.id,
         title: item.title,
         artist: item.artist,
         image: item.image,
+        audio: item.audio,
       },
     });
   };
@@ -93,8 +59,8 @@ export default function HomeScreen() {
       <FlatList
         horizontal
         data={DATA}
-        showsHorizontalScrollIndicator={false}
         keyExtractor={(item) => item.id}
+        showsHorizontalScrollIndicator={false}
         contentContainerStyle={{ paddingLeft: 10 }}
         renderItem={({ item }) => (
           <TouchableOpacity onPress={() => goToPlayer(item)} style={styles.card}>
@@ -121,8 +87,8 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#fff' },
-  title: { fontSize: 20, fontWeight: 'bold', margin: 15,marginTop:30 },
-  card: { marginRight: 15, width: 170, backgroundColor:'aya',borderRadius: 10 },
+  title: { fontSize: 20, fontWeight: 'bold', margin: 15, marginTop: 30 },
+  card: { marginRight: 15, width: 170 },
   image: { width: 170, height: 170, borderRadius: 10 },
   songTitle: { fontSize: 14, fontWeight: '600' },
   artist: { fontSize: 12, color: '#666' },
